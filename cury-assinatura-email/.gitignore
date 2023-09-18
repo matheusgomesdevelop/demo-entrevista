@@ -8,7 +8,7 @@
 # testing
 /coverage
 
-src/http/index.ts
+# src/http/index.ts
 
 # next.js
 /.next/
