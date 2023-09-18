@@ -1,0 +1,101 @@
+@import "../../styles/util/mixin";
+
+$name: "c_modal";
+
+.#{$name} {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: var(--branco);
+  transition: 0.3s;
+  z-index: 10000;
+  animation: openModal 0.3s forwards ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @keyframes openModal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  // Botão fechar
+  &__close {
+    width: 48px;
+    height: 60px;
+    border: none;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    background-color: var(--azul);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-grande);
+    color: var(--branco);
+    cursor: pointer;
+  }
+
+  &__closeVideo {
+    background: url("/images/close-modal-videos.svg") no-repeat;
+    z-index: 99999;
+    right: 20px;
+    top: 90px;
+    left: inherit;
+  }
+
+  &__closeVoltar {
+    width: 54px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    font-family: var(--nunito);
+    color: var(--azul-forte-2);
+    font-size: 14px;
+    background: none;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+
+    & img {
+      margin-right: 5px;
+    }
+  }
+
+  // Botão fechar X
+  &__closeX {
+    outline: 0;
+    border: none;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99;
+
+    @include d(tablet) {
+      right: 40px;
+    }
+  }
+
+  &__closeReferencia {
+    top: 0;
+    height: 80px;
+
+    @include d(tablet-up) {
+      top: 60px;
+      height: 60px;
+    }
+    background-color: var(--verde);
+  }
+}

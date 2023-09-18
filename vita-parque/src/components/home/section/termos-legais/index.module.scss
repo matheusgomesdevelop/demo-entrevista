@@ -1,0 +1,27 @@
+@import "../../../../styles/util/mixin";
+
+$name: "TermosLegais";
+
+.#{$name} {
+  width: 100%;
+  background-color: #ebebeb;
+
+  &__content {
+    width: 100%;
+    @include container;
+    padding-top: var(--espacamento-grande);
+    padding-bottom: var(--espacamento-grande);
+
+    & a {
+      color: var(--azul-claro);
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: var(--fw-regular);
+    }
+
+    &_textoLegal {
+      font-size: 10px;
+      line-height: lineHeight(10);
+    }
+  }
+}

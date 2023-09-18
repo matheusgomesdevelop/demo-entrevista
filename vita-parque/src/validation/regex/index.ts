@@ -1,0 +1,26 @@
+// Validar email - General Email Regex (RFC 5322 Official Standard) - https://emailregex.com/
+export const validateEmail = (email: any) => {
+  const regexp =
+    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+
+  return regexp.test(email);
+};
+
+// Validar celular
+export const validateCel = (cel) => {
+  const regexp = /(?:\+?55\s?)?(?:\(?\d{2}\)?[-\s]?)?\d{4,5}[-\s]?\d{4}/;
+
+  return regexp.test(cel) && validateDDI(cel);
+};
+
+// para evitar temporariamente DDIs russos
+export const validateDDI = (value) => {
+
+  const ddi = value.substr(1, 2);
+
+  if((ddi == '83') || (ddi == '87') || (ddi == '89')){
+    return false;
+  }
+
+  return true;
+}

@@ -1,0 +1,78 @@
+@import "../../../../styles/util/mixin";
+
+$name: "diferenciaisEngelux";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--branco-2);
+  background-image: linear-gradient(45deg, #f4f4f4 80%, #f6573d 100%);
+
+  @include d(tablet-up) {
+    background-image: linear-gradient(45deg, #f4f4f4 70%, #f6573d 100%);
+  }
+
+  &__content {
+    width: 100%;
+    @include container;
+    @include espacamentoSecao;
+  }
+
+  &__diferenciais {
+    width: 100%;
+    max-width: 710px;
+    display: flex;
+    gap: 40px;
+    //overflow-x: auto;
+    padding-top: 40px;
+
+    /*  @include d(tablet-up) {
+      padding-left: 40px;
+    }
+*/
+
+    &_item {
+      padding-top: 5px;
+
+      & h1 {
+        display: flex;
+        font-size: 20px;
+        position: relative;
+
+        & strong {
+          font-weight: var(--fw-bold);
+          margin-right: 5px;
+        }
+
+        &::before {
+          content: "";
+          width: 24px;
+          height: 2px;
+          background-color: var(--azul-claro);
+          display: block;
+          position: absolute;
+          top: -3px;
+        }
+      }
+
+      & p {
+        font-size: 18px;
+        line-height: lineHeight(18);
+        color: var(--preto-forte);
+        font-family: var(--nunito);
+        padding-top: 4px;
+        //  width: 257px;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 24px;
+          height: 2px;
+          background-color: var(--azul-claro);
+          display: block;
+          position: absolute;
+          top: -3px;
+        }
+      }
+    }
+  }
+}

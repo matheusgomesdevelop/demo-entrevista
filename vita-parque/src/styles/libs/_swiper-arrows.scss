@@ -1,0 +1,53 @@
+// Arrow next/prev swiper
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 41px !important;
+  height: 41px !important;
+  display: block;
+  position: absolute;
+  top: 47.5% !important;
+  z-index: 2;
+  background-color: none !important;
+  border: none !important;
+  transition: 0.3s;
+  border-radius: 100%;
+  background: url("/images/arrow-left.svg") no-repeat;
+
+  &::after {
+    content: "" !important;
+    background: none;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.6 !important;
+  }
+
+  &:hover {
+    &::after {
+      transition: 0.3s;
+      margin-left: 10px;
+    }
+  }
+}
+
+.swiper-button-next {
+  right: 20px !important;
+  transform: rotate(180deg);
+
+  @include d(tablet-up) {
+    right: 48px !important;
+  }
+}
+.swiper-button-prev {
+  left: 20px !important;
+
+  @include d(tablet-up) {
+    left: 48px !important;
+  }
+}
+
+.swiper-slide-thumb-active {
+  opacity: 0.6;
+  transition: 0.3s !important;
+}
