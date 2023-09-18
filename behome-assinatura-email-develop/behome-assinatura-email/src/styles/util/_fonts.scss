@@ -1,0 +1,27 @@
+// Fonte
+$museoSans: "/fonts";
+
+@font-face {
+  font-family: "museoSansLight";
+  src: url("#{$museoSans}/MuseoSans-100.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "museoSansRegular";
+  src: url("#{$museoSans}/MuseoSans-300.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "museoSansMedium";
+  src: url("#{$museoSans}/MuseoSans_500.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "museoSansBold";
+  src: url("#{$museoSans}/MuseoSans_700.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "museoSansBlack";
+  src: url("#{$museoSans}/MuseoSans_900.otf") format("truetype");
+}

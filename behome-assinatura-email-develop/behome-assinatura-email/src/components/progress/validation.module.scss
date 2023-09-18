@@ -1,0 +1,44 @@
+$component: "c_progress_validation";
+
+.#{$component} {
+  width: 200px;
+  height: 20px;
+  display: flex;
+  position: relative;
+
+  // Barra default
+  &__bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--bege);
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: 0.3s;
+
+    // Animar o progresso
+    @keyframes animProgress {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    // Preencher a barra
+    &_active {
+      background: repeating-linear-gradient(
+        45deg,
+        var(--roxo-100),
+        var(--roxo-100) 5px,
+        var(--roxo-900) 5px,
+        var(--roxo-900) 10px
+      );
+      transition: 0.3s;
+      animation: animProgress 0.5s forwards linear;
+    }
+  }
+}

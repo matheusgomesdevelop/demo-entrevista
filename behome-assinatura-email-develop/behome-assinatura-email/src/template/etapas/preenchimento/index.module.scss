@@ -1,0 +1,41 @@
+@import "../../../styles//util/mixin";
+
+.preenchimento {
+  & h3 {
+    color: var(--preto-900);
+    font-size: var(--fs-medio);
+    font-family: var(--museo-light);
+    text-align: center;
+
+    @include d(tablet) {
+      text-align: initial;
+    }
+  }
+  &__form {
+    &_inline {
+      display: flex;
+      flex-direction: column;
+      gap: var(--espacamento_medio);
+
+      @include d(tablet-up) {
+        flex-direction: row;
+        gap: var(--espacamento_grande);
+      }
+    }
+
+    &_foto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & p {
+        margin-top: var(--espacamento_pequeno);
+        margin-bottom: 0;
+      }
+
+      & button {
+        margin-top: var(--espacamento_extra-medio);
+      }
+    }
+  }
+}

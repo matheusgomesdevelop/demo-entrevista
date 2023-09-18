@@ -1,0 +1,10 @@
+.tpl {
+  & h3 {
+    font-size: 26px !important;
+
+    & strong {
+      color: var(--roxo-100) !important;
+      font-family: var(--museo-bold) !important;
+    }
+  }
+}

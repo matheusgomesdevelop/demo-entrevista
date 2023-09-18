@@ -1,0 +1,31 @@
+{
+  "name": "behome-assinatura-email",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "^18.7.13",
+    "@types/react": "^18.0.17",
+    "crypto-js": "^4.1.1",
+    "get-orientation": "^1.1.2",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-easy-crop": "^4.5.0",
+    "sass": "^1.54.5",
+    "typescript": "^4.8.2"
+  },
+  "devDependencies": {
+    "@types/downloadjs": "^1.4.3",
+    "downloadjs": "^1.4.7",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "html-to-image": "^1.10.6",
+    "react-input-mask": "^3.0.0-alpha.2"
+  }
+}

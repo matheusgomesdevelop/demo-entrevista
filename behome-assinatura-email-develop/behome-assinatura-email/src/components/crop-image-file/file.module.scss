@@ -1,0 +1,98 @@
+@import "../../styles/util/mixin";
+
+.inputFile {
+  width: 270px;
+  height: 270px;
+  background-color: var(--bege);
+  border-radius: 7px;
+  position: relative;
+
+  &__margin {
+    margin-top: 60px;
+
+    @include d(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  & input {
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+  }
+
+  & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 40px;
+    background-color: var(--branco);
+    color: var(--roxo-900);
+    gap: 12px;
+    font-size: var(--fs-normal);
+    font-family: var(--museo-medium);
+    border-radius: 20px;
+    border: 1px solid var(--roxo-900);
+    outline: 0;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: var(--roxo-100);
+    font-size: var(--fs-pequeno);
+    margin-top: 12px;
+    font-family: var(--museo-regular);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__controls {
+    position: absolute;
+    top: -50px;
+    right: 50px;
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+
+    @include d(tablet) {
+      right: -50px;
+      flex-direction: column;
+      top: 0;
+    }
+
+    & button {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      margin-top: 0 !important;
+
+      &:hover {
+        background-color: var(--roxo-900);
+        color: var(--branco);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    display: none;
+
+    & > img {
+      position: relative;
+      top: 74px;
+    }
+  }
+}

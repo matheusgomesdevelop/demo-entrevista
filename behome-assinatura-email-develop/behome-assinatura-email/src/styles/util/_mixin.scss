@@ -1,0 +1,40 @@
+@mixin centralizar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@function lineHeight($px, $context: 1.5) {
+  @return $px * $context + px;
+}
+
+// tamanho das telas para os breakpoints
+$mobile: 599;
+$tablet: 600;
+$tablet-up: 900;
+$desktop: 1200;
+$desktop-up: 1800;
+
+// breakpoints
+@mixin d($device) {
+  @if ($device == mobile) {
+    @media (max-width: $mobile + px) {
+      @content;
+    }
+  } @else if($device == tablet) {
+    @media (min-width: $tablet + px) {
+      @content;
+    }
+  } @else if($device == tablet-up) {
+    @media (min-width: $tablet-up + px) {
+      @content;
+    }
+  } @else if($device == desktop) {
+    @media (min-width: $desktop + px) {
+      @content;
+    }
+  } @else if($device == desktop-up) {
+    @media (min-width: $desktop-up + px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import "../util/mixin";
+
+$layout: "l_solicitar";
+
+.#{$layout} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--espacamento_extra-medio);
+
+  // Processo
+  &__processo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    // Titulo
+    & > h2 {
+      font-size: var(--fs-grande);
+      color: var(--preto-900);
+      font-family: var(--museo-regular);
+    }
+
+    // Titulo formulario
+    & > h3 {
+      font-size: var(--fs-extra-medio);
+      color: var(--roxo-100);
+      font-family: var(--museo-medium);
+      margin-bottom: 32px;
+
+      & strong {
+        font-family: var(--museo-bold);
+      }
+    }
+
+    // Texto de Aguarde...
+    &_aguarde {
+      max-width: 330px;
+      text-align: center;
+      color: var(--preto-900) !important;
+      font-size: var(--fs-medio) !important;
+      font-family: var(--museo-light) !important;
+
+      & strong {
+        color: vaR(--roxo-900) !important;
+        font-family: var(--museo-bold) !important;
+      }
+
+      @include d(tablet-up) {
+        max-width: 100%;
+      }
+
+      font-family: var(--museo-regular);
+    }
+
+    // Etapas
+    &_etapas {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--espacamento_extra-medio);
+      margin-top: var(--espacamento_extra-medio);
+      margin-bottom: var(--espacamento_grande);
+
+      @include d(tablet-up) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      // Bullet do formulário
+      &__centered {
+        width: 100%;
+        max-width: 330px;
+        margin-top: 30px;
+        margin-bottom: var(--espacamento_extra-medio);
+        justify-content: space-between;
+        gap: 0;
+        flex-wrap: nowrap;
+        position: relative;
+
+        @include d(tablet) {
+          max-width: 420px;
+        }
+
+        @include d(tablet-up) {
+          max-width: 520px;
+        }
+      }
+
+      // Posicionar o c_progress
+      &__progress {
+        width: 100%;
+        position: absolute;
+        top: 26px;
+        z-index: 1;
+      }
+    }
+
+    // Button
+    & > button {
+      margin-top: var(--espacamento_extra-medio);
+    }
+
+    // Formulário da etapa 1
+    &_formEtapa {
+      & > button {
+        margin-top: 24px;
+        @include centralizar;
+      }
+    }
+
+    // Botoes da etapa final
+    &_buttons {
+      display: flex;
+      gap: var(--espacamento_medio);
+      margin-top: 27px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include d(tablet) {
+        gap: var(--espacamento_extra-medio);
+        flex-wrap: nowrap;
+        justify-content: initial;
+      }
+
+      @include d(tablet-up) {
+        gap: var(--espacamento_grande);
+      }
+    }
+
+    /* Borda da assinatura de enfeite (isso não irá para a imagem final)*/
+    &_assinaturaBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 276px;
+      border: 1px solid #e4e4e4;
+      border-radius: 12px;
+      overflow-x: auto;
+
+      @include d(tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+
+  /* Paragrafo das etapas */
+  &__paragrafo {
+    max-width: 351px;
+    font-size: var(--fs-medio);
+    color: var(--preto-400);
+    font-weight: var(--museo-regular);
+    line-height: 26px;
+    text-align: center;
+
+    & strong {
+      font-family: var(--museo-medium);
+    }
+
+    & a {
+      font-family: var(--museo-medium);
+      color: var(--azulEscuro);
+      font-size: var(--fs-normal);
+      text-decoration: underline;
+    }
+
+    // Paragrafo das etapas do tutorial
+    &_etapa {
+      font-size: 16px;
+      font-family: var(--museo-light);
+      position: relative;
+
+      & strong {
+        font-family: var(--museo-regular);
+        color: var(--preto-400);
+      }
+
+      // Icone
+      &_icone {
+        position: absolute;
+        top: -12px;
+        right: -26px;
+        display: none;
+
+        @include d(tablet) {
+          display: block;
+        }
+      }
+    }
+  }
+}
