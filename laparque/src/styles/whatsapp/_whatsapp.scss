@@ -1,0 +1,246 @@
+/* Wrapper (Toda tela) */
+
+.whatsapp-MOP19072021 {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: flex-end;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+/* Abrir */
+
+.whatsapp-MOP19072021.active {
+  display: flex;
+}
+
+/* Animacao aparecer o card */
+
+@keyframes aparecer {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Animar o card */
+
+.whatsapp-MOP19072021.active .whatsapp-MOP19072021__item {
+  animation: aparecer 0.5s forwards linear;
+}
+
+/* Card */
+
+.whatsapp-MOP19072021__item {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 80px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+@media (min-width: 480px) {
+  .whatsapp-MOP19072021__item {
+    margin-right: 20px;
+  }
+}
+
+/* Card header */
+
+.whatsapp-MOP19072021__item-header {
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #0b6156;
+  display: flex;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Foto do usuario */
+
+.whatsapp-MOP19072021__item-header .foto-MOP19072021 {
+  width: 50px;
+  height: 50px;
+}
+
+/* Imagem da foto */
+
+.whatsapp-MOP19072021__item-header .foto-MOP19072021 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Nome wrapper */
+
+.whatsapp-MOP19072021__item-header .nome-MOP19072021 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  padding-bottom: 5px;
+}
+
+/* Nome destacado  */
+
+.whatsapp-MOP19072021__item-header .nome-MOP19072021 > strong {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Descricao abaixo do nome */
+
+.whatsapp-MOP19072021__item-header .nome-MOP19072021 > span {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* Icone de fechar */
+
+.whatsapp-MOP19072021__item-header button.close-MOP19072021 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* SVG do icone de fechar  */
+
+.whatsapp-MOP19072021__item-header button.close-MOP19072021 svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Cor do icone de fechar  */
+
+.whatsapp-MOP19072021__item-header button.close-MOP19072021 svg path {
+  fill: #ffffff;
+}
+
+/* Wrapper do formulario */
+
+.whatsapp-MOP19072021__form {
+  width: 100%;
+  height: 70%;
+  background: url('/images/whatsapp/bg.png');
+  background-color: #e9e0d7;
+  padding: 15px;
+  position: relative;
+}
+
+/* Wrapper dos inputs do formulario */
+
+.whatsapp-MOP19072021__form-column {
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    font-size: var(--fs-pequeno);
+    color: var(--vermelho);
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+  }
+}
+
+/* Inputs do formulario */
+
+.whatsapp-MOP19072021__form input {
+  width: 100%;
+  height: 40px;
+  background-color: #e7ffe7;
+  border-radius: 6px;
+  border: none;
+  border-bottom: 1px solid #cacaca;
+  margin-top: 10px;
+  outline: 0;
+  padding: 0 10px;
+}
+
+@media (min-width: 480px) {
+  .MOP19072021__form input {
+    margin-left: 22%;
+  }
+}
+
+/* Placeholder dos inputs  */
+
+.whatsapp-MOP19072021__form input::placeholder {
+  color: #4a4a4a;
+}
+
+/* Input submit */
+
+.whatsapp-MOP19072021__form input[type='submit'] {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: rgba(11, 97, 86, 1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  align-self: flex-end;
+}
+
+/* Card simulando uma mensagem */
+
+.whatsapp-MOP19072021__form-ola {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 10px 5px 12px 20px;
+  font-size: 14px;
+  color: rgb(74, 74, 74);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 26px;
+  word-wrap: break-word;
+  line-height: 21px;
+  border-radius: 6px;
+  border: 1px solid #cacaca;
+}
+
+@media (min-width: 480px) {
+  .whatsapp-MOP19072021__form-ola {
+    width: 80%;
+  }
+}
+
+/* Botao do whatsapp */
+
+.cta-MOP19072021 {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  cursor: pointer;
+  z-index: 9999999;
+}

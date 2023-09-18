@@ -1,0 +1,125 @@
+@import "../../../../styles/util/mixin";
+
+$name: "diferenciaisUnidade";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--azul-forte);
+
+  &__content {
+    width: 100%;
+    @include container;
+    @include espacamentoSecao;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__titulo {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--espacamento-medio);
+    padding-right: var(--espacamento-medio);
+
+    @include d(tablet-up) {
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    & h1 {
+      max-width: 203px;
+      color: var(--azul-feio);
+      font-size: 30px;
+      font-weight: var(--fw-light);
+
+      & strong {
+        font-weight: var(--fw-bold);
+      }
+      & span {
+        font-size: 40px;
+      }
+    }
+    &_desc {
+      font-size: 18px;
+      line-height: lineHeight(18);
+      color: var(--branco);
+      font-family: var(--nunito);
+      margin-top: var(--espacamento-medio);
+      margin-bottom: var(--espacamento-extra-medio);
+      max-width: 382px;
+
+      & strong {
+        font-weight: var(--fw-bold);
+      }
+    }
+  }
+
+  // Atributos
+  &__atributos {
+    display: flex;
+    justify-content: center;
+
+    @include d(tablet-up) {
+      justify-content: flex-start;
+    }
+
+    & ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      justify-content: safe;
+      flex-wrap: wrap;
+      margin-top: var(--espacamento-medio);
+      max-width: 660px;
+
+      @include d(tablet) {
+        justify-content: flex-start;
+        gap: 30px;
+        margin-top: var(--espacamento-extra-medio);
+      }
+
+      @include d(tablet-up) {
+        padding-left: 60px;
+      }
+
+      & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 169px;
+        margin-bottom: 30px;
+
+        &:nth-child(1) {
+          & p {
+            margin-left: 5px;
+          }
+        }
+
+        & p {
+          margin-left: var(--espacamento-pequeno);
+          margin-top: 12px;
+          font-size: var(--fs-medio);
+          color: var(--branco);
+          line-height: lineHeight(18);
+          text-align: center;
+
+          & strong {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  // Link Veja mais
+  &__vejaMais {
+    color: var(--azul-claro);
+    font-size: var(--fs-pequeno-2);
+    text-decoration: underline;
+    position: relative;
+    top: -6px;
+
+    @include d(tablet) {
+      margin-left: 340px;
+    }
+  }
+}

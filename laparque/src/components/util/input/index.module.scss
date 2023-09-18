@@ -1,0 +1,28 @@
+$name: "c_input";
+
+.#{$name} {
+  width: 100%;
+  height: 27px;
+  background: none;
+  border: 1px solid #bebebe;
+  border: none;
+  border-bottom: 1px solid var(--azul);
+  border-radius: 0;
+  color: var(--azul-forte-2);
+  font-family: var(--nunito);
+  font-size: var(--fs-normal);
+  padding: 18px 5px;
+  outline: 0;
+  transition: 0.3s;
+
+  &::placeholder {
+    opacity: 1;
+    color: var(--azul-forte-2);
+    font-size: var(--fs-normal);
+    font-family: var(--nunito);
+  }
+
+  &:focus {
+    border-bottom: 1px solid var(--azul-claro);
+  }
+}

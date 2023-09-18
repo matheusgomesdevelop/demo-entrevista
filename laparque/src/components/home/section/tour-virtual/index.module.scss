@@ -1,0 +1,144 @@
+@import "../../../../styles/util/mixin";
+
+$name: "tourVirtual";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--branco);
+  background-image: linear-gradient(-28deg, #f4f4f4 70%, #ffffff 50%);
+
+  &__content {
+    width: 100%;
+    @include espacamentoSecao;
+
+    @include d(tablet) {
+      @include container;
+    }
+
+    & h1 {
+      padding-left: 20px;
+
+      @include d(tablet) {
+        padding-left: initial;
+      }
+    }
+  }
+
+  &__tour {
+    margin-top: 30px;
+    max-width: 604px;
+
+    &_iframe {
+      width: 100%;
+      position: relative;
+
+      & iframe {
+        height: 141px;
+
+        @include d(tablet) {
+          height: 249px;
+        }
+      }
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      &__play {
+        width: 76px !important;
+        height: 76px !important;
+        background-color: var(--branco-2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        position: absolute;
+        top: 35% !important;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+
+        &::before {
+          content: "▶";
+          font-size: 38px !important;
+          color: #222;
+          font-weight: 400;
+          display: block;
+          position: relative;
+          left: 5px;
+          top: -2px;
+        }
+      }
+    }
+
+    &_Btn {
+      width: 100%;
+      max-width: 604px;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      & button {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: none;
+        border: none;
+        font-size: 19px;
+        font-weight: var(--fw-light);
+        font-family: var(--nunito);
+        letter-spacing: 1.3px;
+        color: var(--cinza);
+        cursor: pointer;
+        transition: 0.3s;
+
+        & strong {
+          font-weight: var(--fw-bold);
+          margin-right: 7px;
+          font-size: 22px;
+        }
+
+        &::after {
+          content: "";
+          width: 1px;
+          height: 24px;
+          background-color: var(--cinza);
+          display: block;
+          margin-left: 13px;
+          margin-right: 13px;
+          opacity: 0.6;
+          cursor: initial;
+        }
+
+        &:nth-last-child(1) {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &__active {
+        color: var(--azul-forte) !important;
+        transition: 0.3s;
+
+        &::before {
+          content: "";
+          width: 30px;
+          height: 2px;
+          background-color: #9b101a;
+          display: block;
+          position: absolute;
+          bottom: -5px;
+        }
+      }
+    }
+  }
+}

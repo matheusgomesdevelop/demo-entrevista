@@ -1,0 +1,120 @@
+@import "../../../styles/util/mixin";
+
+$name: "l_footer";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--azul-forte);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  position: relative;
+
+  // Container
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  &__middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include container;
+    max-width: 900px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    @include d(tablet-up) {
+      padding-top: 20px;
+    }
+
+    &_logos {
+      display: flex;
+      gap: 30px;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        color: var(--branco);
+        font-size: 12px;
+        gap: 12px;
+      }
+    }
+
+    &_copy {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      @include d(tablet) {
+        margin-top: 40px;
+      }
+
+      @include d(tablet-up) {
+        flex-direction: row;
+        gap: 60px;
+        margin-top: 0;
+      }
+
+      & p {
+        font-size: 16px;
+        line-height: lineHeight(16);
+        color: var(--azul-claro);
+        max-width: 482px;
+        margin-top: 24px;
+
+        & strong {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__bar {
+    width: 100vw;
+    height: 1px;
+    background-color: var(--bege);
+    display: block;
+    opacity: 0.4;
+  }
+
+  &__logoMop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+    font-size: 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & img {
+      margin-left: 8px;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    @include container;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include d(tablet-up) {
+      justify-content: flex-start;
+      gap: 160px;
+    }
+
+    & a {
+      width: 148px;
+      font-size: 18px;
+      color: var(--branco);
+      text-decoration: underline;
+      font-weight: var(--fw-regular);
+    }
+  }
+}

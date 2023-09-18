@@ -1,0 +1,116 @@
+@import "../../../../styles/util/mixin";
+
+$name: "conhecaBairro";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--branco);
+
+  &__content {
+    width: 100%;
+    @include container;
+    @include espacamentoSecao;
+
+    &_title {
+      & h1 {
+        position: relative;
+        &::before {
+          content: "";
+          width: 25px;
+          height: 2px;
+          background-color: #f04f28;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -12px;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: lineHeight(18);
+    color: var(--preto-forte);
+    font-family: var(--nunito);
+    margin-top: var(--espacamento-medio);
+    margin-bottom: var(--espacamento-extra-medio);
+    max-width: 335px;
+
+    @include d(tablet) {
+      max-width: 604px;
+    }
+    & strong {
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  // Atributos
+  &__atributos {
+    & ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: var(--espacamento-medio);
+      margin-bottom: var(--espacamento-extra-medio);
+      max-width: 604px;
+
+      & li {
+        display: flex;
+        width: 100%;
+
+        &:not(:nth-last-child(1)) {
+          margin-bottom: var(--espacamento-extra-medio);
+        }
+
+        & p {
+          margin-left: var(--espacamento-pequeno);
+          font-size: var(--fs-medio);
+          font-family: var(--nunito);
+
+          & strong {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 300;
+            font-size: 20px;
+            color: #0c1e4b;
+          }
+
+          & span {
+            font-size: 18px;
+            font-weight: 400;
+            color: #4c4d4f;
+          }
+        }
+
+        & img {
+          position: relative;
+          top: 4px;
+        }
+      }
+    }
+  }
+
+  // Link Veja mais
+  &__vejaMais {
+    color: var(--azul-claro);
+    font-size: var(--fs-pequeno-2);
+    text-decoration: underline;
+
+    @include d(tablet) {
+      margin-left: 36px;
+    }
+  }
+
+  // Imagem bairro
+  &__imgBairro {
+    width: 100%;
+    margin-top: var(--espacamento-medio);
+    & img {
+      width: 100%;
+      max-width: 604px;
+      max-height: 255px;
+      object-fit: cover;
+    }
+  }
+}
