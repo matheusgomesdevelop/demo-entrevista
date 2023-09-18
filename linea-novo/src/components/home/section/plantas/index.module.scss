@@ -1,0 +1,86 @@
+@import "../../../../styles/util/mixin";
+
+$name: "l_plantas";
+
+.#{$name} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--branco);
+  position: relative;
+
+  &__content {
+    width: 100%;
+    @include espacamentoSecao;
+    @include container;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Plantas
+  &__plantas {
+    width: 100%;
+    max-width: 604px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12px;
+
+    // Legenda
+    &_legenda {
+      font-family: var(--nunito);
+      font-size: var(--fs-normal);
+      color: var(--bege);
+      font-weight: var(--fw-regular);
+      position: absolute;
+      line-height: lineHeight(16);
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.8px;
+      text-align: center;
+      bottom: 20px;
+
+      @include d(tablet) {
+        bottom: 40px;
+      }
+
+      & strong {
+        color: var(--azul-claro);
+        font-weight: var(--fw-regular);
+        position: relative;
+        display: block;
+
+        @include d(tablet) {
+          padding-left: 16px;
+          display: initial;
+        }
+
+        &::before {
+          content: "";
+          width: 2px;
+          height: 22px;
+          background-color: var(--bege);
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 5px;
+          opacity: 0.3;
+
+          @include d(tablet) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    // Zoon
+    &_zoon {
+      position: absolute;
+      top: 0;
+      right: -9px;
+      z-index: 9;
+    }
+  }
+}

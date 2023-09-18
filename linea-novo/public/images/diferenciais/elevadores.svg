@@ -1,0 +1,14 @@
+<svg id="Elevadores" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="noun_Elevator_3314107" transform="translate(-4.618 -4.065)">
+    <g id="Grupo_4815" data-name="Grupo 4815" transform="translate(7.618 5.065)">
+      <g id="Grupo_4814" data-name="Grupo 4814" transform="translate(0 0)">
+        <path id="Caminho_2199" data-name="Caminho 2199" d="M61.911,40.727H60.894l.509.987Z" transform="translate(-45.013 -26.866)" fill="#03f5ff" stroke="#03f5ff" stroke-width="0.4"/>
+        <path id="Caminho_2200" data-name="Caminho 2200" d="M61.4,35.127l-.509.987h1.018Z" transform="translate(-45.013 -23.318)" fill="#03f5ff" stroke="#03f5ff" stroke-width="0.4"/>
+        <path id="Caminho_2201" data-name="Caminho 2201" d="M60.823,31.64H58.358a.372.372,0,0,0-.378.366v4.862a.372.372,0,0,0,.378.366h2.464a.372.372,0,0,0,.378-.366V32.006A.372.372,0,0,0,60.823,31.64ZM60.445,36.5H58.736V32.373h1.708Z" transform="translate(-43.201 -21.109)" fill="#03f5ff" stroke="#03f5ff" stroke-width="0.4"/>
+        <path id="Caminho_2202" data-name="Caminho 2202" d="M26.548,9.244h7.778a.382.382,0,0,0,.292-.133.357.357,0,0,0,.079-.3c-.254-1.268-2.17-2.743-4.261-2.743s-4,1.474-4.259,2.743a.357.357,0,0,0,.079.3A.383.383,0,0,0,26.548,9.244ZM30.436,6.8a4.116,4.116,0,0,1,3.331,1.713H30.941l-.721-.867a.386.386,0,0,0-.532-.055.359.359,0,0,0-.057.515l.338.407H27.108A4.111,4.111,0,0,1,30.436,6.8Z" transform="translate(-23.414 -6.065)" fill="#03f5ff" stroke="#03f5ff" stroke-width="0.4"/>
+        <path id="Caminho_2203" data-name="Caminho 2203" d="M32.547,15.611H19.256a.372.372,0,0,0-.378.366V32.588a.372.372,0,0,0,.378.366H32.547a.372.372,0,0,0,.378-.366V15.978A.372.372,0,0,0,32.547,15.611ZM21.406,32.222V18.062h4.117v14.16Zm4.873,0V18.062H30.4v14.16Zm5.89,0H31.153V17.7a.372.372,0,0,0-.378-.366H21.028a.372.372,0,0,0-.378.366V32.222H19.634V16.344H32.169Z" transform="translate(-18.878 -10.955)" fill="#03f5ff" stroke="#03f5ff" stroke-width="0.4"/>
+      </g>
+    </g>
+  </g>
+  <rect id="Retângulo_2308" data-name="Retângulo 2308" width="24" height="24" fill="none"/>
+</svg>

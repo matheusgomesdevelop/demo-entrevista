@@ -1,0 +1,37 @@
+@import "../../../styles/util/mixin";
+
+$name: "header";
+
+.#{$name} {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include centralizar;
+  position: fixed;
+  top: 0;
+  background-color: var(--azul-forte);
+  box-shadow: 0px 3px 6px #0000001f;
+  padding-left: var(--espacamento-medio);
+  padding-right: var(--espacamento-medio);
+  z-index: 99;
+  transition: 0.3s;
+
+  &__branco {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--azul-claro);
+    transition: 0.3s;
+  }
+
+  // Container
+  &__container {
+    width: 100%;
+    max-width: 1260px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    @include centralizar;
+  }
+}

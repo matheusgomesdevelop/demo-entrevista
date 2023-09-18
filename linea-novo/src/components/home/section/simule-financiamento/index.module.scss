@@ -1,0 +1,55 @@
+@import "../../../../styles/util/mixin";
+
+$name: "simuleFinanciamento";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--azul-forte);
+
+  &__content {
+    width: 100%;
+    @include container;
+    @include espacamentoSecao;
+    padding-bottom: 50px;
+
+    & h1 {
+      color: #03f5ff;
+    }
+
+    & p {
+      color: var(--branco);
+    }
+
+    & button {
+      width: 266px !important;
+      height: 51px !important;
+      background-color: var(--branco);
+      color: #0c91e5;
+      font-size: 14px;
+      font-weight: var(--fw-extra-bold);
+      border: 3px solid #29c9f8;
+      border-radius: 4px;
+
+      & :hover {
+        border: 3px solid var(--azul-forte-2);
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: lineHeight(18);
+    color: var(--preto-forte);
+    font-family: var(--nunito);
+    margin-top: var(--espacamento-medio);
+    margin-bottom: var(--espacamento-extra-medio);
+    max-width: 300px;
+
+    @include d(tablet) {
+      max-width: 400px;
+    }
+    & strong {
+      font-weight: var(--fw-bold);
+    }
+  }
+}

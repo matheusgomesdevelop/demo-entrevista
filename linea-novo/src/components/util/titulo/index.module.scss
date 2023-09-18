@@ -1,0 +1,16 @@
+@import "../../../styles/util/mixin";
+
+$name: "c_titulo";
+
+.#{$name} {
+  font-size: var(--fs-grande);
+  color: var(--azul-forte);
+  line-height: lineHeight(26);
+  font-family: var(--nunito);
+  letter-spacing: 1.3px;
+  font-weight: var(--fw-light);
+
+  & strong {
+    font-weight: var(--fw-extra-bold);
+  }
+}

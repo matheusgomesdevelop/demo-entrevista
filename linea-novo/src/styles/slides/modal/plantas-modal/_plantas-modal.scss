@@ -1,0 +1,59 @@
+$name: "swiper_plantasModal";
+
+.#{$name} {
+  width: 100%;
+
+  & .swiper-slide {
+    display: flex;
+    //align-items: center;
+    height: 100vh;
+
+    & img {
+      width: 100%;
+      max-width: 304px;
+      max-height: calc(100vh - 120px);
+
+      @include d(tablet) {
+        max-width: 404px;
+      }
+
+      @include d(tablet-up) {
+        max-width: 504px;
+      }
+
+      @include d(desktop) {
+        max-width: 100%;
+      }
+      object-fit: scale-down;
+      @include centralizar;
+    }
+
+    &-active {
+      height: 100vh;
+    }
+  }
+
+  & .swiper-button-prev {
+    left: 12px !important;
+
+    @include d(tablet-up) {
+      left: 30px !important;
+    }
+
+    @include d(desktop) {
+      left: 40px !important;
+    }
+  }
+
+  & .swiper-button-next {
+    right: 12px !important;
+
+    @include d(tablet-up) {
+      right: 30px !important;
+    }
+
+    @include d(desktop) {
+      right: 40px !important;
+    }
+  }
+}
