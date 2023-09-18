@@ -17,7 +17,7 @@ Alguns projetos que desenvolvi no período em que trabalhei na agência mop.
 ## Ferramentas
 
 - [Behome: Ferramenta de assinatura de e-mail](https://behome-assinatura-email.vercel.app/)
-- [Cury: Ferramenta de assinatura de e-mail]()
+- [Cury: Ferramenta de assinatura de e-mail](https://cury-assinatura-q98993ef5-assinatura-behome.vercel.app/)
 
 ## Dashboards e CRM
 
