@@ -1,4 +1,4 @@
-# Projetor desenvolvidos na Agencia Mop
+# Projetos desenvolvidos na Agencia Mop
 
 Alguns projetos que desenvolvi no período em que trabalhei na agência mop.
 
