@@ -30,4 +30,7 @@ Alguns projetos que desenvolvi no período em que trabalhei na agência mop.
 - [Cury Hub: CuryArt](https://www.figma.com/file/baQi8MAQoYmnOvC2ssJDIe/Cury-Hub-2023?type=design&node-id=1450-28780&mode=design&t=QVhjjprJXKmwe4X2-0)
 - [MPD: Ficha Cadastral](https://github.com/Agencia-Mop/mpd-ficha-cadastral)
 - [Mop CMS](https://github.com/Agencia-Mop/mop-cms-frontend)
+
+## Outros
+
 - [Email marketing](https://github.com/Agencia-Mop/email-marketing)
