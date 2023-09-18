@@ -1,0 +1,145 @@
+@import "../../../styles/util/mixin";
+
+$name: "c_button";
+
+.#{$name} {
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  font-family: var(--nunito);
+  transition: 0.3s;
+  border-radius: 4px;
+  padding: var(--espacamento-pequeno) var(--espacamento-medio);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: var(--fs-pequeno);
+
+  // Default
+  &__default {
+    min-width: 82px;
+    height: 40px;
+    background-color: var(--branco-2);
+    color: var(--cinza);
+
+    &:hover {
+      background-color: var(--cinza);
+      color: var(--branco);
+      opacity: 0.8;
+    }
+
+    &_active {
+      transition: 0.3s;
+      background-color: var(--azul-forte);
+      color: var(--branco);
+
+      &:hover {
+        background-color: var(--azul-forte);
+        opacity: 1;
+      }
+    }
+  }
+
+  // Botão flutuante
+  &__flutuante {
+    width: 282px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--azul-claro);
+    text-transform: initial;
+    transition: 0.3s;
+    position: fixed;
+    bottom: var(--espacamento-grande);
+    left: 0;
+    right: 0;
+    @include centralizar;
+    z-index: 99;
+    color: var(--branco);
+
+    & svg {
+      & path {
+        fill: var(--branco);
+      }
+    }
+
+    &:hover {
+      width: 300px;
+      background: var(--azul-forte);
+      opacity: 1;
+      color: var(--branco);
+
+      & svg {
+        & path {
+          fill: var(--branco);
+        }
+      }
+    }
+
+    @include d(tablet-up) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -24px;
+      @include centralizar;
+    }
+  }
+
+  // Zoon
+  &__zoon {
+    background: none;
+    position: absolute;
+    top: var(--espacamento-medio);
+    right: -10px;
+    z-index: 99;
+  }
+
+  // azul
+  &__azul {
+    width: 100%;
+    height: 51px;
+    max-width: 266px;
+    color: var(--azul-claro);
+    border-radius: 4px;
+    background: var(--branco);
+    font-family: var(--nunito);
+    font-size: var(--fs-pequeno-2);
+    font-weight: var(--fw-extra-bold);
+    border: 2px solid var(--azul-claro);
+
+    &:hover {
+      color: var(--azul-forte-2);
+      border-color: var(--azul-forte-2);
+    }
+
+    @include d(tablet-up) {
+      border: 2px solid var(--azul-forte-2);
+      color: var(--azul-forte-2);
+
+      &:hover {
+        border-color: var(--azul-claro);
+        color: var(--azul-claro);
+      }
+    }
+  }
+
+  // Branco
+  &__branco {
+    width: 224px;
+    background: none;
+    height: 50px;
+    border: 1px solid var(--branco);
+    font-family: var(--nunito);
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--branco);
+
+    & strong {
+      font-weight: 700;
+      margin-left: 5px;
+    }
+  }
+}

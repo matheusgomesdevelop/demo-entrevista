@@ -1,0 +1,234 @@
+@import "../../../../../styles/util/mixin";
+
+$fvm: "l_fvm";
+$lancamento: "l_lancamento";
+
+// Fotos vídeos e mapa
+.#{$fvm} {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  position: relative;
+
+  @include d(tablet-up) {
+    height: 500px;
+  }
+}
+
+// Lançamento
+.#{$lancamento} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include container;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 32px;
+
+  @include d(desktop) {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  &__navlink {
+    width: 100%;
+    height: 84px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    & button {
+      &:not(:nth-child(1)) {
+        margin-left: var(--espacamento-pequeno);
+      }
+    }
+
+    &_video {
+      & button {
+        &:nth-child(1) {
+          margin-left: var(--espacamento-pequeno);
+
+          @include d(desktop) {
+            display: none;
+          }
+        }
+
+        &:nth-child(2) {
+          display: none;
+          @include d(desktop) {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &_container {
+      width: 100%;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include container;
+
+      @include d(tablet-up) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__empreendimento {
+    width: 100%;
+    max-width: 767px;
+    display: flex;
+    flex-direction: column;
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      margin-top: var(--espacamento-grande);
+
+      // Nome empreendimento
+      &_nome {
+        display: flex;
+        align-items: center;
+
+        & strong {
+          margin-left: 7px;
+        }
+      }
+
+      // Endereço
+      &_endereco {
+        font-family: var(--nunito);
+        color: var(--preto);
+        font-size: var(--fs-medio);
+        margin-top: 24px;
+        font-weight: var(--fw-light);
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 315px;
+
+        @include d(tablet) {
+          max-width: 100% !important;
+        }
+
+        & img {
+          margin-right: 10px;
+          position: relative;
+
+          @media (max-width: 462px) {
+            top: -12px;
+          }
+        }
+
+        /*   &::after {
+          content: "";
+          width: 25px;
+          height: 2px;
+          background-color: var(--azul-forte);
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+        } */
+
+        & strong {
+          color: var(--preto);
+          font-weight: var(--fw-bold);
+        }
+
+        &__stand {
+          font-size: var(--fs-normal);
+          color: #980a08;
+          font-weight: var(--fw-regular);
+          text-transform: uppercase;
+          margin-top: 40px;
+          max-width: 350px;
+
+          @include d(tablet) {
+            margin-top: 20px;
+          }
+
+          & strong {
+            text-transform: initial;
+            color: var(--bege);
+            font-weight: var(--fw-regular);
+            margin-left: 5px;
+          }
+        }
+      }
+
+      // Descrição
+      &_descricao {
+        width: 100%;
+        max-width: 634px;
+        font-size: var(--fs-normal);
+        line-height: lineHeight(16);
+        color: var(--preto);
+        margin-top: 32px;
+
+        @include d(tablet) {
+          margin-bottom: 40px;
+          margin-top: 0;
+        }
+
+        & a {
+          color: #f04f28;
+          text-decoration: underline;
+        }
+      }
+
+      // Atributos
+      &_atributos {
+        & ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 600px;
+
+          & li {
+            display: flex;
+            align-items: center;
+            height: 24px;
+            width: 100%;
+
+            &:not(:nth-last-child(1)) {
+              margin-bottom: var(--espacamento-extra-medio);
+            }
+
+            @include d(tablet) {
+              width: 50%;
+            }
+
+            & p {
+              margin-left: var(--espacamento-pequeno);
+              font-size: var(--fs-medio);
+
+              & strong {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      &__descDif {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+
+        @include d(tablet-up) {
+          flex-direction: column;
+          margin-top: 32px;
+        }
+      }
+    }
+
+    /* Card empreendimento */
+  }
+}

@@ -1,0 +1,17 @@
+$name: "posts_wrapper";
+
+.#{$name} {
+  align-items: center;
+  display: flex;
+  gap: 0 26px;
+  justify-content: space-between;
+
+  max-width: 1360px;
+  overflow-x: scroll;
+  width: 100%;
+
+  &::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+  }
+}

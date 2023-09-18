@@ -1,0 +1,93 @@
+@import "../../../../../styles/util/mixin";
+
+$name: "diferenciaisProximidades";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--branco);
+
+  &__content {
+    width: 100%;
+    @include container;
+  }
+
+  &__desc {
+    font-size: 18px;
+    line-height: lineHeight(18);
+    color: var(--preto-forte);
+    font-family: var(--nunito);
+    margin-top: var(--espacamento-medio);
+    margin-bottom: var(--espacamento-extra-medio);
+    max-width: 335px;
+
+    @include d(tablet) {
+      max-width: 535px;
+    }
+    & strong {
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  // Atributos
+  &__atributos {
+    & ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: var(--espacamento-grande);
+      max-width: 560px;
+
+      & li {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        width: 100%;
+
+        &:not(:nth-last-child(1)) {
+          margin-bottom: var(--espacamento-extra-medio);
+        }
+
+        &:not(:nth-child(-n + 3)) {
+          display: none;
+        }
+
+        @include d(tablet) {
+          &:not(:nth-child(-n + 3)) {
+            display: flex;
+          }
+
+          &:nth-child(even) {
+            padding-left: 60px;
+          }
+        }
+
+        @include d(tablet) {
+          width: 50%;
+        }
+
+        & p {
+          margin-left: var(--espacamento-pequeno);
+          font-size: 20px;
+          font-weight: 500;
+
+          & strong {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  // Link Veja mais
+  &__vejaMais {
+    color: var(--azul-claro);
+    font-size: var(--fs-pequeno-2);
+    text-decoration: underline;
+    position: relative;
+    top: -6px;
+
+    @include d(tablet) {
+      margin-left: 340px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../../../../../styles/util/mixin";
+
+$vertical: "blog_post_vertical";
+$horizontal: "blog_post_horizontal";
+$container: "container";
+
+.#{$vertical} {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+
+}
+
+.#{$horizontal} {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    p{
+        margin-left: 12px;
+    }
+}
+
+.#{$container} {
+    margin: 55px 50px 0;
+    text-align: justify;
+
+    &__blog_main_content {
+        display: flex;
+    }
+
+    &__sub_posts{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-left: 22px;
+    }
+
+    &__blog_content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 24px;
+        margin: 32px 40px 0 0;
+
+        @media screen and (max-width: 976px){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 900px){
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

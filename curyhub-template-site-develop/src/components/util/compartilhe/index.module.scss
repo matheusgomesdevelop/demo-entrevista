@@ -1,0 +1,157 @@
+@import "../../../styles/util/mixin";
+
+.compartilhe {
+  width: 335px;
+  height: 170px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 26px;
+  gap: 32px;
+  background-image: url("/images/bg-compartilhe-mob.png");
+  background-repeat: no-repeat;
+
+  @include d(tablet) {
+    width: 556px;
+    height: 240px;
+    padding: 50px;
+
+    background-image: url("/images/bg-compartilhe.png");
+    background-repeat: no-repeat;
+  }
+
+  & header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & h1 {
+      color: #151a21;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    & button {
+      width: 24px;
+      height: 24px;
+      outline: 0;
+      border: none;
+      background: url("/images/template/icons/compartilhe/close.svg") no-repeat;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  & section {
+    display: flex;
+    gap: 25px;
+
+    @include d(tablet) {
+      gap: 47px;
+    }
+  }
+}
+
+.socialItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  & p {
+    color: #4c4d4f;
+    font-size: 12px;
+    font-weight: 400;
+    display: none;
+    margin-top: 8px;
+
+    @include d(tablet) {
+      display: block;
+    }
+  }
+
+  &__facebook {
+    width: 26px;
+    height: 26px;
+    background: url("/images/template/icons/compartilhe/face-mob.svg") no-repeat;
+    display: block;
+
+    @include d(tablet) {
+      width: 52px;
+      height: 52px;
+      background: url("/images/template/icons/compartilhe/face.svg") no-repeat;
+    }
+  }
+
+  &__twitter {
+    width: 26px;
+    height: 26px;
+    background: url("/images/template/icons/compartilhe/twi-mob.svg") no-repeat;
+    display: block;
+
+    @include d(tablet) {
+      width: 52px;
+      height: 52px;
+      background: url("/images/template/icons/compartilhe/twi.svg") no-repeat;
+    }
+  }
+
+  &__telegram {
+    width: 26px;
+    height: 26px;
+    background: url("/images/template/icons/compartilhe/tele-mob.svg") no-repeat;
+    display: block;
+
+    @include d(tablet) {
+      width: 52px;
+      height: 52px;
+      background: url("/images/template/icons/compartilhe/tele.svg") no-repeat;
+    }
+  }
+
+  &__linkedin {
+    width: 26px;
+    height: 26px;
+    background: url("/images/template/icons/compartilhe/link-mob.svg") no-repeat;
+    display: block;
+
+    @include d(tablet) {
+      width: 52px;
+      height: 52px;
+      background: url("/images/template/icons/compartilhe/link.svg") no-repeat;
+    }
+  }
+
+  &__whatsapp {
+    width: 26px;
+    height: 26px;
+    background: url("/images/template/icons/compartilhe/whats-mob.svg") no-repeat;
+    display: block;
+
+    @include d(tablet) {
+      width: 52px;
+      height: 52px;
+      background: url("/images/template/icons/compartilhe/whats.svg") no-repeat;
+    }
+  }
+
+  &__compartilhar {
+    width: 26px;
+    height: 26px;
+    background: url("/images/template/icons/compartilhe/comp-mob.svg") no-repeat;
+    display: block;
+
+    @include d(tablet) {
+      display: none;
+
+      & + p {
+        display: none;
+      }
+    }
+  }
+}

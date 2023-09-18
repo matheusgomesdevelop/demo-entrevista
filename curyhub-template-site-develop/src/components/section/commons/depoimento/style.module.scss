@@ -1,0 +1,71 @@
+@import "../../../../styles/util/mixin";
+
+$name: "container";
+
+.#{$name} {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &__depoiment{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 38px 0;
+
+    max-width: 1360px;
+    width: 100%;
+
+    &_header{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      
+      width: 100%;
+    }
+
+    &_section{
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 12px 80.5px;
+
+      &_header{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        gap: 0 8px;
+
+        &_text{
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          gap: 8px 0;
+        }
+      }
+
+      &_body{
+        align-items: flex-start;
+        display: flex;
+        gap: 0 8px;
+
+        &_text{
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          gap: 8px 0;
+        }
+      }
+    }
+  }
+
+  @include d(desktop){
+    &__depoiment{
+      &_section{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

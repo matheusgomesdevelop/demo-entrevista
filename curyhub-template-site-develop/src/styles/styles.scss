@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
+@import "./util/mixin";
+
+:root {
+  // Fontes
+  --nunito: "Nunito Sans";
+
+  // Font-weight
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  // Cores
+  --azul: #284eaf;
+  --azul-forte: #0c1e4b;
+  --azul-forte-2: #284eaf;
+  --azul-claro: #0c91e5;
+  --cinza: #a0a0a0;
+  --bege: #818386;
+  --vermelho: #980a08;
+  --preto: #4c4d4f;
+  --preto-forte: #151a21;
+  --branco: #ffffff;
+  --branco-2: #f4f4f4;
+  --azul-feio: #03f5ff;
+
+  // Espaçamentos
+  --espacamento-pequeno: 12px;
+  --espacamento-medio: 20px;
+  --espacamento-extra-medio: 32px;
+  --espacamento-grande: 40px;
+
+  // Tamanho de fontes
+  --fs-pequeno: 12px;
+  --fs-pequeno-2: 14px;
+  --fs-normal: 16px;
+  --fs-medio: 18px;
+  --fs-grande: 26px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  font-family: var(--nunito);
+  font-size: 16px;
+  color: var(--preto);
+  background-color: var(--branco);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Custom Swiper arrows Next / Prev
+@import "./libs/swiper-arrows";
+
+// Custom slides
+@import "./slides/home/galeria/galeria";
+@import "./slides/home/plantas/plantas";
+@import "./slides/home/diferenciaisEngelux/diferenciaisEngelux";
+
+@import "./slides/modal/plantas-modal/plantas-modal";
+@import "./slides/modal/galeria-modal/galeria-modal";
+
+// Cta whatsapp
+@import "./whatsapp/whatsapp";
+
+.swal2-container {
+  z-index: 10000 !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.7rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--cinza);
+}

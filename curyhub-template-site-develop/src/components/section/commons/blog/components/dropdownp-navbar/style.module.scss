@@ -1,0 +1,40 @@
+$blog_container: "blog_container";
+
+.#{blog_container} {
+  display: none;
+  position: absolute;
+  top: 39px;
+  left: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(148, 219, 255, 1) 0%,
+    rgba(125, 212, 255, 1) 36%,
+    rgba(102, 204, 255, 1) 70%
+  );
+  font-size: 1.125rem;
+  gap: 29px;
+  padding: 43px 22px;
+  text-align: center;
+  width: 100%;
+
+  ul,
+  li {
+    list-style-type: none;
+  }
+
+  li{
+    align-self: center;
+    justify-self: center;
+    max-width: fit-content;
+  }
+
+  &__articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  &:hover{
+    display: block;
+  }
+}

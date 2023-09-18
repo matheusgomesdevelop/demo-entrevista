@@ -1,0 +1,35 @@
+@import "../../../../styles/util/mixin";
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 166px 0px 64px 0px;
+
+    &__wrapper{
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 22px 27px;
+
+        max-width: 1064px;
+        width: 100%;
+    }
+
+    &__introduction{
+        height: 100%;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    @include d(desktop){
+
+        &__wrapper{
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

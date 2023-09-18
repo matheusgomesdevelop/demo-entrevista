@@ -1,0 +1,20 @@
+@import "../../../../../styles/util/mixin";
+
+$name: "simuleFinanciamento";
+
+.#{$name} {
+  width: 100%;
+
+  &__content {
+    width: 100%;
+    @include container;
+    @include espacamentoSecao;
+    padding-top: 0;
+    padding-bottom: 50px;
+
+    & p {
+      max-width: 535px;
+      margin-bottom: 18px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../../styles/util/mixin";
+
+$name: "galeriaModal";
+
+.#{$name} {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: transparent linear-gradient(180deg, #f4f4f4 0%, #ebebeb 100%) 0%
+    0% no-repeat padding-box;
+
+  // Legenda
+  &__thumb {
+    width: 100%;
+    height: 100px;
+    background-color: #f4f4f4;
+    border-top: 2px solid var(--azul-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__voltar {
+    position: absolute;
+    top: 80px;
+    right: 12px;
+
+    @include d(tablet-up) {
+      top: 95px;
+
+      right: 30px;
+    }
+
+    @include d(desktop) {
+      right: 40px !important;
+    }
+  }
+
+  &__fachada {
+    @include d(desktop) {
+      max-height: 612px !important;
+    }
+  }
+}

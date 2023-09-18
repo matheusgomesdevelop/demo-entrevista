@@ -1,0 +1,43 @@
+@import "../../../../styles/util/mixin";
+
+$name: "container";
+
+.#{$name} {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+ 
+  padding: 40px 40px 32px 40px;
+
+  &__specialist {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 28px 40px;
+
+    max-width: 1360px;
+    width: 100%;
+    
+    &_avatar {
+      border-radius: 90px;
+      height: 178px; 
+      width: 178px; 
+    }
+
+    &_presentation{
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      gap: 16px 0;
+    }
+  }
+
+  @include d(desktop) {
+
+    &__specialist {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+  } 
+}
