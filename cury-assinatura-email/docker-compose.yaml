@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  web: 
+    image: node:14.17.1
+    container_name: assinatura-email
+    volumes: 
+      - .:/app
+    working_dir: '/app'
+    entrypoint: '/app/entrypoint.sh'

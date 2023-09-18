@@ -1,0 +1,50 @@
+@import "../../styles/util/mixin";
+
+$component: "c_title";
+
+.#{$component} {
+  font-size: var(--fs-gigante);
+  color: var(--azul);
+  max-width: 320px;
+  line-height: lineHeight(26);
+  text-align: center;
+  font-family: var(--museo-light);
+
+  @include d(tablet-up) {
+    max-width: 100%;
+    line-height: lineHeight(32);
+  }
+
+  // textoDestacado
+  & > strong {
+    font-family: var(--museo-medium);
+  }
+
+  // Descrição
+  &__desc {
+    font-size: var(--fs-medio);
+    color: var(--preto);
+    font-family: var(--museo-light);
+    margin-top: 16px;
+    margin-bottom: var(--espacamento_extra-medio);
+    text-align: center;
+
+    @include d(tablet) {
+      max-width: 420px;
+    }
+
+    @include d(tablet-up) {
+      max-width: 100%;
+      margin-top: 8px;
+    }
+  }
+
+  /* Cores reversas (Titulo e texto trocam de fonte) */
+  &_reverse {
+    font-family: var(--museo-medium);
+
+    & strong {
+      font-family: var(--museo-light);
+    }
+  }
+}

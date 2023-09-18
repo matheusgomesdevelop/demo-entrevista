@@ -1,0 +1,39 @@
+@import "src/styles/util/mixin";
+
+$layout: "l_main";
+
+.#{$layout} {
+  width: 100%;
+  min-height: calc(100vh - 95px);
+  background: url("/images/bg-principal.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 699px) {
+    overflow-x: auto;
+  }
+
+  // Conteudo que irá ser substituido
+  &__content {
+    @include centralizar;
+    max-width: 980px;
+    min-height: calc(100vh - 295px);
+    margin-bottom: var(--espacamento_gigante);
+    padding-left: var(--espacamento_medio);
+    padding-right: var(--espacamento_medio);
+
+    @include d(tablet-up) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media (max-width: 320px) {
+      max-width: 320px;
+      padding-left: var(--espacamento_pequeno);
+      padding-right: var(--espacamento_pequeno);
+    }
+  }
+}

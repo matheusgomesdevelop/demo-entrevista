@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300;500;700;900&display=swap");
+
+@import "./util/fonts";
+
+:root {
+  // Fonte principal
+  --museo-light: "museoSansLight";
+  --museo-regular: "museoSansRegular";
+  --museo-medium: "museoSansMedium";
+  --museo-bold: "museoSansBold";
+  --museo-black: "museoSansBlack";
+
+  // cores
+  --azul: #13487c;
+  --azulClaro: #66ccff;
+  --azulEscuro: #185b92;
+  --preto: #495057;
+  --branco: #ffffff;
+  --cinza: #93989c;
+  --cinzaClaro: #e4e4e4;
+  --verde: #22ce93;
+  --bege: #f5f5f5;
+
+  // Espaçamentos
+  --espacamento_pequeno: 12px;
+  --espacamento_medio: 20px;
+  --espacamento_extra-medio: 40px;
+  --espacamento_grande: 60px;
+  --espacamento_gigante: 100px;
+
+  // Tamanho fontes
+  --fs-pequeno: 14px;
+  --fs-normal: 18px;
+  --fs-medio: 20px;
+  --fs-grande: 22px;
+  --fs-gigante: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  font-size: var(--fs-normal);
+  font-family: var(--museo-regular);
+  background-color: var(--branco);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,181 @@
+@import "../util/mixin";
+
+$layout: "l_solicitar";
+
+.#{$layout} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--espacamento_extra-medio);
+
+  // Processo
+  &__processo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    // Titulo
+    & > h2 {
+      font-size: var(--fs-grande);
+      color: var(--azulEscuro);
+      font-family: var(--museo-regular);
+    }
+
+    // Titulo formulario
+    & > h3 {
+      font-size: var(--fs-medio);
+      color: var(--azulEscuro);
+      font-family: var(--museo-light);
+      margin-bottom: 32px;
+
+      & strong {
+        font-family: var(--museo-bold);
+      }
+    }
+
+    // Texto de Aguarde...
+    &_aguarde {
+      max-width: 330px;
+      text-align: center;
+
+      @include d(tablet-up) {
+        max-width: 100%;
+      }
+    }
+
+    // Etapas
+    &_etapas {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--espacamento_extra-medio);
+      margin-top: var(--espacamento_extra-medio);
+      margin-bottom: var(--espacamento_grande);
+
+      @include d(tablet-up) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      // Bullet do formulário
+      &__centered {
+        width: 100%;
+        max-width: 330px;
+        margin-top: 30px;
+        margin-bottom: var(--espacamento_extra-medio);
+        justify-content: space-between;
+        gap: 0;
+        flex-wrap: nowrap;
+        position: relative;
+
+        @include d(tablet) {
+          max-width: 420px;
+        }
+
+        @include d(tablet-up) {
+          max-width: 520px;
+        }
+      }
+
+      // Posicionar o c_progress
+      &__progress {
+        width: 100%;
+        position: absolute;
+        top: 26px;
+        z-index: 1;
+      }
+    }
+
+    // Button
+    & > button {
+      margin-top: var(--espacamento_extra-medio);
+    }
+
+    // Formulário da etapa 1
+    &_formEtapa {
+      & > button {
+        margin-top: 24px;
+        @include centralizar;
+      }
+    }
+
+    // Botoes da etapa final
+    &_buttons {
+      display: flex;
+      gap: var(--espacamento_medio);
+      margin-top: 27px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include d(tablet) {
+        gap: var(--espacamento_extra-medio);
+        flex-wrap: nowrap;
+        justify-content: initial;
+      }
+
+      @include d(tablet-up) {
+        gap: var(--espacamento_grande);
+      }
+    }
+
+    /*Borda da assinatura de enfeite (isso não irá para a imagem final)*/
+    &_assinaturaBox {
+      border: 1px solid #e4e4e4;
+      border-radius: 12px;
+      overflow: hidden;
+
+      @include d(tablet) {
+        padding-left: 12px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+        padding-top: 12px;
+      }
+    }
+  }
+
+  /* Paragrafo das etapas */
+  &__paragrafo {
+    max-width: 351px;
+    font-size: var(--fs-medio);
+    color: var(--preto);
+    font-weight: var(--museo-regular);
+    line-height: 26px;
+    text-align: center;
+
+    & strong {
+      font-family: var(--museo-medium);
+    }
+    & a {
+      font-family: var(--museo-medium);
+      color: var(--azulEscuro);
+      font-size: var(--fs-normal);
+      text-decoration: underline;
+    }
+
+    // Paragrafo das etapas do tutorial
+    &_etapa {
+      font-size: 16px;
+      font-family: var(--museo-light);
+      position: relative;
+
+      & strong {
+        font-family: var(--museo-regular);
+      }
+
+      // Icone
+      &_icone {
+        position: absolute;
+        top: -12px;
+        right: -26px;
+        display: none;
+
+        @include d(tablet) {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "../../styles/util/mixin";
+
+$component: "c_button";
+
+.#{$component} {
+  width: 148px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--azulClaro);
+  font-size: var(--fs-normal);
+  font-family: var(--museo-medium);
+  color: var(--branco);
+  padding: var(--espacamento_pequeno) var(--espacamento_medio);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--azulEscuro);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  // Tamanhos
+  &__sm {
+    width: 114px;
+  }
+
+  &__xs {
+    width: 170px;
+  }
+
+  &__xs2 {
+    width: 150px;
+  }
+
+  &__md {
+    width: 220px;
+  }
+
+  &__lg {
+    width: 300px;
+
+    @media (max-width: 320px) {
+      width: 240px;
+      font-size: var(--fs-pequeno);
+    }
+
+    @include d(tablet) {
+      width: 334px;
+    }
+  }
+
+  // Cores
+  &__info {
+    background-color: var(--branco);
+    border: 1px solid var(--azulEscuro);
+    color: var(--azulEscuro);
+
+    &:hover {
+      background-color: var(--branco);
+      color: var(--azulClaro);
+      border: 1px solid var(--azulClaro);
+    }
+  }
+
+  &__success {
+    background-color: var(--verde);
+
+    &:hover {
+      background-color: #088e60;
+    }
+  }
+}

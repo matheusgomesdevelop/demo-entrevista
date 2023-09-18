@@ -1,0 +1,22 @@
+$layout: "l_codigo_acesso";
+
+.#{$layout} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--espacamento_gigante);
+  text-align: center;
+
+  // Form Codigo acesso
+  &__formAcesso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Button
+    & > button {
+      margin-top: var(--espacamento_extra-medio);
+    }
+  }
+}
