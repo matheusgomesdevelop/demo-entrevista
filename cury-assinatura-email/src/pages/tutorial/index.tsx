@@ -30,23 +30,21 @@ export default function PageTutorial() {
     const auth = sessionStorage.getItem("auth_key");
 
     if (auth) {
+      setAuth(auth)
       // Verifica se a codigo de acesso é válido
-     // const decrypt_key = decrypt(auth, process.env.CODIGO_ACESSO);
+ //     const decrypt_key = decrypt(auth, process.env.CODIGO_ACESSO);
 
       /*
        * Verifica se a chave que está armazenada no sessionStorage, ao ser descriptografada,
        * o resultado é igual ao CODIGO_ACESSO que está na variável de ambiente.
        */
 
-
-      const temp = "123456"
-
-      if (auth === temp) {
-        setAuth(auth);
+    /*  if (decrypt_key === process.env.CODIGO_ACESSO) {
+        setAuth(auth); 
       } else {
         router.push("/");
-      }
-    }
+      } */
+    } 
 
     // Verifica se está autorizado a acessar esta página
     if (!auth) {
