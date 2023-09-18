@@ -1,0 +1,52 @@
+@import "../../../styles/util";
+
+$name: "l_tour";
+
+.#{$name} {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary-dark-side-sacoman);
+  position: relative;
+  @include spaceSectionY;
+  padding-bottom: 0;
+
+  &__container {
+    width: 100%;
+    height: 729px;
+    @include containerSecao;
+    @include spaceSectionX;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h1 {
+      margin-bottom: $space-md;
+      font-size: $fs-md5;
+      z-index: 2;
+    }
+
+    & iframe {
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      width: 45%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("/grafismos/bg-tour.png");
+      transform: rotateZ(180deg);
+      display: block;
+      opacity: 0.5;
+      mix-blend-mode: overlay;
+      z-index: 1;
+    }
+  }
+}

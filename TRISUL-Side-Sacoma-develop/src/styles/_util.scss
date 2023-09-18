@@ -1,0 +1,122 @@
+// Colors
+$secondarySideSacoma: #7aa62c;
+$secondaryDarkSideSacoma: #185355;
+
+$color-menu-item-default: #1f1f21;
+$color-menu-item-hover: $secondarySideSacoma;
+$color-menu-item-hover-before: $secondarySideSacoma;
+
+// Espaçamentos
+$space-sm1: 11px;
+$space-sm2: 12px;
+$space-sm3: 16px;
+$space-default1: 20px;
+$space-default2: 24px;
+$space-default3: 26px;
+$space-md: 32px;
+$space-md1: 40px;
+$space-md2: 46px;
+$space-lg1: 60px;
+$space-lg2: 80px;
+$space-lg3: 120px;
+
+// FontSize
+$fs-sm1: 12px;
+$fs-sm2: 14px;
+$fs-default1: 16px;
+$fs-default2: 18px;
+$fs-default3: 20px;
+$fs-md1: 22px;
+$fs-md2: 26px;
+$fs-md3: 24px;
+$fs-md4: 26px;
+$fs-md5: 28px;
+$fs-md6: 30px;
+$fs-lg1: 32px;
+$fs-lg2: 36px;
+
+// FontWeight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 600;
+
+// Breakpoints
+$mobile: 599;
+$tablet: 600;
+$tablet-up: 900;
+$desktop: 1200;
+$desktop-up: 1800;
+
+@mixin d($device) {
+  @if ($device == mobile) {
+    @media (max-width: ($mobile + px)) {
+      @content;
+    }
+  } @else if($device == tablet) {
+    @media (min-width: ($tablet + px)) {
+      @content;
+    }
+  } @else if($device == tablet-up) {
+    @media (min-width: ($tablet-up + px)) {
+      @content;
+    }
+  } @else if($device == desktop) {
+    @media (min-width: ($desktop + px)) {
+      @content;
+    }
+  } @else if($device == desktop-up) {
+    @media (min-width: ($desktop-up + px)) {
+      @content;
+    }
+  }
+}
+
+// Mixins
+@mixin spaceSectionX {
+  padding-left: $space-default2;
+  padding-right: $space-default2;
+
+  @media screen and (min-width: 1500px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin spaceSectionY {
+  padding-top: $space-lg1;
+  padding-bottom: $space-lg1;
+}
+
+// Centralizar
+@mixin centralizar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  max-width: 1440px;
+  @include centralizar();
+  @include spaceSectionX();
+}
+
+@mixin containerSecao {
+  width: 100%;
+  max-width: 1440px;
+  @include centralizar();
+  @include spaceSectionY();
+}
+
+@mixin containerModal {
+  width: 100%;
+  max-width: 1440px;
+  @include centralizar();
+  @include spaceSectionX();
+  padding-top: $space-md;
+
+  @include d(tablet-up) {
+    padding: $space-default1 $space-md $space-md $space-lg1;
+  }
+}

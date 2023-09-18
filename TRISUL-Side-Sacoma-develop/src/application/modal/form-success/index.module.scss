@@ -1,0 +1,31 @@
+@import "../../../styles/util";
+
+.formSuccess {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include containerModal();
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    max-width: 332px;
+    align-self: center;
+    margin-top: $space-lg3;
+    text-align: center;
+
+    & h1 {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 140%;
+      color: #1f1f21;
+      letter-spacing: 0.3px;
+      margin-bottom: $space-sm1;
+    }
+  }
+}

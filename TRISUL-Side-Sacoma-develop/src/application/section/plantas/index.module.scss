@@ -1,0 +1,212 @@
+@import "../../../styles/util";
+
+$name: "l_plantas";
+
+.#{$name} {
+  width: 100%;
+  background-color: var(--white-900);
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    @include containerSecao;
+    position: relative;
+  }
+
+  &__polygon_container{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: -1px;
+  }
+
+  &__polygon {
+    background-color: $secondaryDarkSideSacoma;
+    height: 88px;
+    width: 90px;
+    transform: rotate(180deg);
+    -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100px;
+  //   height: 120px;
+  //   background-color: $secondaryDarkSideSacoma;
+  //   top: -70px;
+  //   left: -40px;
+  //   transform: rotate(50deg);
+
+  //   @include d(tablet-up) {
+  //     top: -80px;
+  //     transform: rotate(60deg);
+  //   }
+  // }
+  
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100px;
+  //   height: 120px;
+  //   background-color: $secondarySideSacoma;
+  //   bottom: -70px;
+  //   right: -40px;
+  //   transform: rotate(50deg);
+
+  //   @include d(tablet-up) {
+  //     bottom: -80px;
+  //     transform: rotate(60deg);
+  //   }
+  // }
+
+  &__title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md2;
+    @include spaceSectionX;
+
+    @include d(desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    & span {
+      font-weight: 600;
+      color: $secondarySideSacoma;
+      font-size: $fs-lg2;
+
+      & p {
+        color: var(--black-900);
+        font-size: $fs-md3;
+        margin-top: $space-sm1;
+        line-height: calc(24 * 1.5) + px;
+      }
+    }
+  }
+
+  &__modal_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 26px;
+
+    background-color: $secondarySideSacoma;
+    border-radius: 30px;
+    color: var(--white-900);
+    font-size: $fs-default3;
+    font-weight: 700;
+    height: 64px;
+    max-width: 322px;
+    padding: 16px 28px;
+    width: 100%;
+  }
+
+  &__swiper_container {
+    width: 100%;
+    display: flex;
+  }
+
+  &__swiper{
+    margin-top: 30px;
+  }
+
+  &__swiper_slide{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+
+    @include d(desktop) {
+      flex-direction: row;
+    }
+
+  }
+
+  &__slide_info{
+    display: flex;
+    flex-direction: column;
+
+    @include spaceSectionX;
+    width: 100%;
+
+    @include d(desktop) {
+      margin-left: 0px;
+      width: fit-content;
+    }
+  }
+
+  &__info_title{
+      color: var(--secondary-side-sacoman);
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 41.4px;
+      & b{
+        font-weight: 900;
+    }
+  }
+
+  &__info_metros{
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+    &b{
+      font-weight: 700;
+    }
+  }
+
+  &__info_varanda{
+    color: var(--secondary-side-sacoman);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 34.5px;
+    width: 183px;
+  }
+
+  &__image{
+    height: 424px;
+    width: 361px;
+
+    @include d(tablet) {
+      height: 624px;
+      width: 561px;
+    }
+  }
+
+  &__button{
+    position: absolute;
+    bottom: 50px;
+    right: 80px
+  }
+
+  &__thumb_description{
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 18px;
+
+    color: var(--black-900);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20.7px;
+    width: fit-content;
+
+    strong{
+      font-weight: 700;
+    }
+  }
+
+  &__thumb_green_description{
+    color: var(--secondary-side-sacoman)
+  }
+
+}

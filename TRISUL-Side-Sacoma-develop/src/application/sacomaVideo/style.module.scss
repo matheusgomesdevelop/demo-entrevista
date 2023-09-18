@@ -1,0 +1,27 @@
+@import "../../styles/util";
+
+.sacoma_video_container {
+  width: 100%;
+  display: flex;
+  background-color: var(--secondary-side-sacoman);
+  @include spaceSectionY;
+
+  .sacoma_video_container__wrapper {
+    width: 100%;
+    @include container;
+    @include spaceSectionX;
+
+    iframe {
+      width: 100%;
+      height: 205px;
+
+      @include d(tablet) {
+        height: 405px;
+      }
+
+      @include d(tablet-up) {
+        height: 700px;
+      }
+    }
+  }
+}

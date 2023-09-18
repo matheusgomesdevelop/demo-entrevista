@@ -1,0 +1,136 @@
+.underline_button_container {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.35px;
+  margin-top: 16px;
+
+  .underline_button_container__icon_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--white-900);
+    border-radius: 20px;
+    height: 32px;
+    padding: 4px;
+    width: 32px;
+
+    img {
+      color: var(--black-900);
+    }
+  }
+
+  .underline_button_container__label_content {
+    flex: 0 1 auto;
+  }
+}
+
+.solid_background_button_container {
+  width: 243px;
+  height: 64px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  box-shadow: 0px 12px 12px rgba(122, 166, 44, 0.2);
+  border: 0;
+  border-radius: 100px;
+  color: var(--secondary-side-sacoman);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 13px;
+  padding: 16px 20px;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--secondary-side-sacoman);
+    color: var(--white-900);
+    transition: 0.3s ease-in;
+  }
+
+  &__label_content {
+    white-space: nowrap;
+  }
+
+  &__icon_background {
+    & img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary-side-sacoman);
+      border-radius: 20px;
+      height: 32px;
+      padding: 10px;
+      width: 32px;
+    }
+  }
+}
+
+.solid_background_button_container:hover,
+.underline_button_container:hover,
+.styled_button:hover {
+  cursor: pointer;
+}
+
+@mixin clearButton {
+  background: none;
+  outline: 0;
+  border: none;
+}
+
+.iconButton {
+  @include clearButton();
+  cursor: pointer;
+}
+
+.openModal {
+  @include clearButton();
+  cursor: pointer;
+}
+
+.styled_button{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  justify-self: flex-end;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  
+  background: var(--secondary-side-sacoman);
+  border: 0;
+  border-radius: 16px;
+  height: 32px;
+  opacity: 0.8;
+  width: 32px;
+}
+
+.round_button{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--secondary-side-sacoman);
+  border: 0;
+  border-radius: 50px;
+  color: var(--white-900);
+  font-size: 26px;
+  font-weight: 600;
+  height: 74px;
+  letter-spacing: 0.3px;
+  line-height: 36.4px;
+  margin-top: 32px;
+  padding: 19px 20px;
+  width: 74px;
+}

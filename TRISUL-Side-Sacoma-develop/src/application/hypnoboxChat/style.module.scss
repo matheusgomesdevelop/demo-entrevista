@@ -1,0 +1,31 @@
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  iframe {
+    width: 80%;
+    height: 80%;
+  }
+  background-color: #0000001f;
+}
+
+.headerContainer {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  header {
+    width: 80%;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+  }
+}

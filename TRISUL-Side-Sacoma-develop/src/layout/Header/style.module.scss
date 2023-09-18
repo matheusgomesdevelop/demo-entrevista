@@ -1,0 +1,70 @@
+@import "../../styles/util";
+
+.header {
+  @include container;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  & > a,
+  & > img {
+    align-self: center;
+  }
+}
+
+.header__links {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 $space-default2;
+}
+
+.header__link {
+  white-space: nowrap;
+  position: relative;
+  transition: 0.3s;
+  font-size: $fs-default1;
+  font-weight: $fw-medium;
+  color: $color-menu-item-default;
+
+  &:hover {
+    color: $color-menu-item-hover;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $color-menu-item-hover-before;
+      position: absolute;
+      top: $space-md;
+      transition: 0.3s;
+    }
+  }
+
+  &[id="active"] {
+    transition: 0.3s;
+    color: $color-menu-item-hover;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $color-menu-item-hover-before;
+      position: absolute;
+      top: $space-md;
+      transition: 0.3s;
+    }
+  }
+}
+
+.header__side_menu_icon {
+  color: var(--secondary-side-sacoman);
+}

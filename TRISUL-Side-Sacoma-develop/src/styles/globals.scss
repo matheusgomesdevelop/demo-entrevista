@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --secondary-side-sacoman: #7aa62c;
+  --secondary-side-sacoman-light: #A6E144;
+  --secondary-dark-side-sacoman: #185355;
+
+  --green-700: #388b10;
+  --green-100: #a9c486;
+
+  --gray-900: #504f4b;
+  --gray-700: #666666;
+  --gray-600: #807c7d;
+  --gray-500: #d1d0d8;
+
+  --white-900: #ffffff;
+  --white-700: #f2f2f2;
+
+  --black-900: #000000;
+  --black-800: #1f1f21;
+  --black-700: #1f1f21e5;
+  --black-500: #18171c;
+  --black-400: #666669;
+  --black-300: #313137;
+  --black-200: #474749;
+  --black-100: #7e7d83;
+
+  --yellow-900: #fec43d;
+  --yellow-800: #c69016;
+  --yellow-700: #faf203;
+
+  --blue-900: #041c3ecc;
+  --blue-850: #041c3e;
+
+  //GRADIENTES
+  --gradient-side-sacoman: linear-gradient(270deg, #79a941 0%, #185355 100%);
+  --gradient-dark-side-sacoman: linear-gradient(37.55deg, #3b3b3b 0%, #757575 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--white-700);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section:hover {
+  cursor: default;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+@import "./util";
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 100%;
+  background-color: #041c3e;
+
+  &::after {
+    font-size: 18px !important;
+    color: var(--white-900);
+    font-weight: bold;
+    position: relative;
+  }
+}
+.swiper-button-prev {
+  left: $space-default1 !important;
+
+  &::after {
+    content: "";
+    left: -1px !important;
+  }
+}
+.swiper-button-next {
+  right: $space-default1 !important;
+
+  &::after {
+    content: "";
+    right: -1px !important;
+  }
+}
+
+.swiper-slide-thumb-active {
+  border: 2px solid #7aa62c !important;
+}
+
+// Cta whatsapp flutuante
+@import "./whatsapp/whatsapp";
+
+.swal2-container {
+  z-index: 10000 !important;
+}
+
+@import "./sweet-alert/sweet-alert";

@@ -1,0 +1,22 @@
+.icon_title > h2 {
+  color: var(--white-900);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 16px 0;
+  text-align: left;
+  margin: 0;
+}
+
+.solid_background {
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--blue-850);
+    height: 80px;
+    padding: 24px;
+    width: 80px;
+  }
+}

@@ -1,0 +1,136 @@
+@import "../../styles/util";
+
+.sacoman_infos_container {
+  background: var(--black-200);
+  background-image: url("../../../public/icons/background_ornament.png");
+  @include spaceSectionX;
+
+  .sacoman_infos_container__infos_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include containerSecao;
+    position: relative;
+
+    @include d(desktop) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .sacoman_infos_container__logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: $space-md2;
+
+      @include d(tablet-up) {
+        margin-bottom: $space-lg1;
+      }
+
+      @include d(desktop) {
+        margin-bottom: 0;
+      }
+
+      & > img {
+        margin-bottom: $space-md2;
+      }
+
+      & p {
+        margin-top: $space-sm2;
+        color: var(--white-900);
+        font-size: $fs-md1;
+        text-transform: uppercase;
+
+        & strong {
+          font-weight: $fw-bold;
+        }
+      }
+    }
+
+    .sacoman_infos_container__infos_aside {
+      display: flex;
+      flex-direction: column;
+
+      @include d(desktop) {
+        margin-left: $space-lg3;
+      }
+
+      // Diferenciais fgts
+      &_inline {
+        display: flex;
+        flex-direction: column;
+        gap: $space-md2;
+
+        @include d(tablet-up) {
+          gap: $space-lg3;
+          flex-direction: row;
+        }
+
+        &:nth-child(1) {
+          margin-bottom: $space-md2;
+
+          @include d(tablet-up) {
+          }
+        }
+      }
+      // Diferenciais fgts
+
+      .sacoman_infos_container__info {
+        max-width: 446px;
+        display: flex;
+
+        h3 {
+          color: var(--secondary-side-sacoman);
+          font-size: $fs-lg1;
+          font-weight: 500;
+          line-height: 41.4px;
+
+          @include d(tablet) {
+            font-size: $fs-lg2;
+          }
+        }
+
+        img {
+          height: 20px;
+          margin: 25px 12px 0 0;
+          width: 20px;
+        }
+
+        span {
+          color: var(--white-900);
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 48px;
+          letter-spacing: 0.3px;
+        }
+
+        p {
+          color: var(--white-900);
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+          width: 230px;
+
+          b {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36.96px;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+    }
+
+    &__totem {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+
+      @media screen and (min-width: 1440px) {
+        display: block;
+      }
+    }
+  }
+}

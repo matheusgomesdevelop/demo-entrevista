@@ -1,0 +1,17 @@
+@import "../../../styles/util";
+
+$name: "ctaWhatsFlutuante";
+
+.#{$name} {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 9999;
+  bottom: 87px;
+  right: 12px;
+
+  @include d(tablet) {
+    right: 26px;
+  }
+}

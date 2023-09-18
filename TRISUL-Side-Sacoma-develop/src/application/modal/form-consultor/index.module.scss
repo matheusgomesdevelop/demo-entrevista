@@ -1,0 +1,135 @@
+@import "../../../styles/util";
+
+.formConsultor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include containerModal();
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    max-width: 332px;
+    align-self: center;
+    margin-top: $space-lg3;
+    text-align: center;
+
+    & h1 {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 140%;
+      color: #1f1f21;
+      letter-spacing: 0.3px;
+      margin-bottom: $space-sm1;
+    }
+  }
+}
+
+.contact_container__form_section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+
+  color: var(--white-900);
+
+  h3,
+  b {
+    color: var(--secondary-side-sacoman);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50.4px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  
+  b {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p,
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0.3px;
+  }
+
+  p {
+    margin: 0 62px 12px 0;
+  }
+
+  span {
+    margin-top: 28px;
+
+    a {
+      color: var(--yellow-700);
+      text-decoration: underline;
+    }
+  }
+
+  .contact_container__form_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 358px;
+
+    p {
+      color: var(--black-100);
+      text-align: left;
+      margin: 28px 0 28px 14px;
+    }
+  }
+
+  .contact_container__contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .contact_container_form_field {
+    & + p {
+      margin-top: 18px;
+    }
+  }
+
+  .contact_container_form_field,
+  .contact_container_form_button {
+    border: 1px solid #7e7d83;
+    border-radius: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.3px;
+    padding: 24px 29px;
+    width: 358px;
+  }
+
+  .contact_container_form_button {
+    background-color: var(--secondary-side-sacoman);
+    color: var(--white-900);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .contact_container_form_field::placeholder {
+    color: var(--black-500);
+  }
+
+  .contact_container__privacy {
+    color: var(--black-900);
+
+    a {
+      color: var(--secondary-side-sacoman);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import "../../styles/util";
+
+.sheet_info_container {
+  margin-top: 12px;
+  text-transform: uppercase;
+
+  &:nth-last-child(1) {
+    .sheet_info_container__divider {
+      display: none;
+    }
+  }
+
+  span {
+    display: flex;
+    color: var(--white-900);
+    margin-left: 4px;
+    font-size: $fs-default1;
+  }
+
+  .info_title {
+    flex: 0 1 auto;
+  }
+
+  .info_description {
+    flex: 0 1 auto;
+    order: 1;
+    flex-grow: 1;
+
+    color: var(--blue-850);
+    line-height: 22.4px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 6px;
+    max-width: inherit;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  .sheet_info_container__multiple_info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    margin-top: 12px;
+    width: 100%;
+
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.sheet_info_container__divider {
+  border: 1px solid #666669;
+  height: 0px;
+  margin-top: 12px;
+  width: inherit;
+  mix-blend-mode: overlay;
+}
+
+.data_sheet_container {
+  background: var(--secondary-side-sacoman);
+  position: relative;
+
+  .data_sheet_container__wrapper {
+    @include container;
+    padding-top: $space-md1;
+
+    @include d(tablet-up) {
+      padding-top: $space-lg1;
+      padding-bottom: $space-md1;
+    }
+
+    h4 {
+      color: var(--white-900);
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      width: 100%;
+
+      @include d(tablet-up) {
+        margin-top: 0px;
+      }
+    }
+
+    .data_sheet_container__infos {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: $space-md;
+
+      @include d(tablet-up) {
+        gap: 32px;
+      }
+
+      .data_sheet_container__left_column,
+      .data_sheet_container__right_column {
+        width: 100%;
+        padding-bottom: $space-default1;
+
+        @include d(tablet-up) {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .data_sheet__under_polygon {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    margin-bottom: -1px;
+
+    .data_sheet__polygon_3 {
+      background: var(--blue-850);
+      height: 88px;
+      width: 90px;
+      -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    }
+  }
+
+  @include d(tablet-up) {
+    .data_sheet_container__wrapper {
+      h4 {
+        margin-top: 0px;
+      }
+
+      .data_sheet_container__infos {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 0 32px;
+      }
+    }
+  }
+
+  @include d(desktop-up) {
+    .data_sheet_container__wrapper {
+      h4 {
+        margin-left: 0px;
+      }
+    }
+  }
+}

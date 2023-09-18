@@ -1,0 +1,120 @@
+@import "../../styles/util";
+
+.environments_container {
+  .environments_container__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+    @include containerSecao;
+    @include spaceSectionX;
+    padding-top: $space-md1;
+    background-color: var(--white-700);
+    position: relative;
+    padding-bottom: 0;
+
+    @include d(tablet-up) {
+      padding-top: $space-md2;
+    }
+
+    &__sectionTitle {
+      margin-top: $space-default1;
+
+      @include d(tablet-up) {
+        margin-top: 0;
+      }
+    }
+
+    .environments_container__polygon_1 {
+      position: absolute;
+      right: left;
+      top: 0;
+      background: var(--black-200);
+      box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.32);
+      height: 52px;
+      margin-top: -1px;
+      width: 89px;
+
+      -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+      clip-path: polygon(100% 0, 0 0, 50% 100%);
+
+      .environments_container__polygon_2 {
+        position: relative;
+        left: 29px;
+        top: 14px;
+
+        background: var(--secondary-side-sacoman);
+        height: 18px;
+        width: 29px;
+        z-index: 89;
+
+        -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+        clip-path: polygon(100% 0, 0 0, 50% 100%);
+      }
+    }
+
+    .environments_container__environment_title {
+      color: var(--secondary-dark-side-sacoman);
+      font-weight: 600;
+
+      .environments_container__environment_subtitle {
+        color: var(--black-300);
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    .environments_container__environments {
+      align-items: flex-start;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-top: 37px;
+
+      gap: $space-md1 $space-sm3;
+
+      @include d(tablet) {
+        gap: $space-md1 $space-md2;
+      }
+
+      @include d(tablet-up) {
+        gap: $space-md1 $space-lg3;
+      }
+
+      section {
+        color: var(--secondary-side-sacoman);
+
+        img {
+          height: 47px;
+          width: 47px;
+        }
+      }
+
+      p {
+        color: var(--black-200);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        letter-spacing: 0px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 161px;
+      }
+    }
+  }
+  .environments_container__under_polygon {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 0;
+    right: 0;
+
+    .environments_container__polygon_3 {
+      background: var(--secondary-side-sacoman);
+      height: 88px;
+      margin-bottom: -1px;
+      width: 90px;
+      -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    }
+  }
+}

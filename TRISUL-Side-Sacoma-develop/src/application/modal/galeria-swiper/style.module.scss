@@ -1,0 +1,133 @@
+@import "../../../styles/util";
+
+.swiperModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1780px;
+  padding-top: $space-md;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+
+    background: transparent;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    max-height: 760px;
+    width: 100%;
+  }
+
+  &__swiper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__swiper_slide {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__swiper_image {
+    height: 554px;
+    max-width: 1152px;
+    width: 100%;
+  }
+
+  &__fachada_image {
+    height: 660px;
+    width: 404px;
+  }
+
+  &__image_figcaption {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 75px;
+
+    color: var(--white-900);
+    background: #000000;
+    border-top: 1px solid #c69016;
+    font-size: $fs-sm2;
+    font-weight: $fw-regular;
+    height: 42px;
+    line-height: 19.6px;
+    padding: 8px $space-default1;
+    text-transform: uppercase;
+    width: 315px;
+
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 100% 50%);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 90% 0);
+  }
+
+  &__collapse_button {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 4px;
+  }
+
+  &__active_button {
+    img {
+      -moz-transition: transform 1s;
+      -webkit-transition: transform 1s;
+      transition: transform 1s;
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__hidden {
+    display: none;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+
+    border-top: 1px solid #d1d0d8;
+    // margin-left: 70px;
+    min-height: 120px;
+    padding: 32px;
+    width: 100%;
+
+    -webkit-transition: height 0.5s linear;
+    -moz-transition: height 0.5s linear;
+    -ms-transition: height 0.5s linear;
+    -o-transition: height 0.5s linear;
+    transition: height 0.5s linear;
+  }
+
+  &__thumb {
+    &_slide {
+      max-width: 92px;
+      height: 108px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__thumbs {
+    &_container {
+      width: 100%;
+    }
+  }
+}

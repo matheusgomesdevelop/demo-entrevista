@@ -1,0 +1,249 @@
+@import "../../styles/util";
+
+.contact_container__polygon_1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    margin-bottom: -2px;
+    display: none;
+
+    @include d(tablet-up) {
+      display: block;
+    }
+  }
+
+  .background {
+    background: var(--secondary-dark-side-sacoman);
+    height: 60px;
+    width: 100%;
+    margin: 0 -1px;
+  }
+}
+
+.contact_container {
+  background: var(--secondary-dark-side-sacoman);
+  background-image: url("../../../public/icons/blue_ornament_background.svg");
+  background-position: 0 133%;
+  background-repeat: repeat-x;
+
+  @include d(tablet) {
+    background-position: 0 163%;
+  }
+
+  @include d(tablet-up) {
+    background-position: 0 170%;
+  }
+
+  @include d(desktop) {
+    background-position: right -10%;
+    background-repeat: no-repeat;
+  }
+
+  .contact_container_wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 29px 0;
+    @include container;
+    @include spaceSectionX;
+
+    padding-bottom: 260px;
+
+    @include d(tablet) {
+      padding-bottom: 160px;
+    }
+
+    @include d(desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .contact_container__contact_info {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0.8;
+      background: var(--secondary-dark-side-sacoman);
+
+      height: 100%;
+
+      @include d(tablet-up) {
+        align-items: flex-start;
+      }
+
+      span {
+        text-transform: uppercase;
+      }
+
+      .contact_container__contact_policies {
+        color: var(--white-900);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.4px;
+        letter-spacing: 0.3px;
+        margin-top: 24px;
+        background: var(--secondary-dark-side-sacoman);
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 12px 0;
+
+          margin-top: 16px;
+          margin-left: 18px;
+          width: fit-content;
+        }
+      }
+
+      .contact_container__policiesTerms_desktop {
+        display: none;
+        color: var(--green-100);
+        font-size: 9.5px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.3px;
+        margin-top: 136px;
+        text-transform: uppercase;
+        width: 85%;
+
+        @include d(desktop) {
+          display: block;
+        }
+      }
+    }
+
+    .contact_container__form_section {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      background: var(--secondary-dark-side-sacoman);
+
+      color: var(--white-900);
+
+      p,
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13px;
+        letter-spacing: 0.3px;
+      }
+
+      p {
+        margin: 0 62px 12px 0;
+      }
+
+      span {
+        margin-top: 28px;
+        text-align: center;
+
+        a {
+          color: var(--yellow-700);
+          text-decoration: underline;
+        }
+      }
+
+      .contact_container__form_wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: var(--secondary-dark-side-sacoman);
+      }
+
+      .contact_container__contact_form {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .contact_container_form_field {
+        & + p {
+          margin-top: 18px;
+        }
+
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+
+      .contact_container_form_field,
+      .contact_container_form_button {
+        border: 0;
+        border-radius: 160px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 0.3px;
+        padding: 24px 29px;
+        width: 320px;
+        height: 60px;
+      }
+
+      .contact_container_form_button {
+        background-color: var(--secondary-side-sacoman);
+        color: var(--white-900);
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .contact_container_form_field::placeholder {
+        color: var(--black-500);
+      }
+    }
+
+    .contact_container__float_right_aside {
+      align-items: flex-end;
+      display: flex;
+      flex: 0.8;
+      justify-content: center;
+      height: 505px;
+
+      .contact_container__background_ornament {
+        mix-blend-mode: soft-light;
+        opacity: 0.6;
+        width: 100%;
+      }
+
+      .contact_container__mop_logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 29px 0;
+
+        color: var(--green-100);
+        //  padding-top: 40px;
+
+        p {
+          margin-right: 12px;
+        }
+
+        .contact_container__policiesTerms_mobile {
+          width: 100%;
+          display: block;
+          color: var(--green-100);
+          font-size: 11px;
+          font-weight: 400;
+          line-height: 140%;
+          letter-spacing: 0.3px;
+          text-transform: uppercase;
+          width: 100%;
+          text-transform: uppercase;
+
+          @include d(tablet) {
+            max-width: 85%;
+          }
+
+          @include d(desktop) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

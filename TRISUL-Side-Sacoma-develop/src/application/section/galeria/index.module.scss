@@ -1,0 +1,123 @@
+@import "../../../styles/util";
+
+$name: "l_galeria";
+
+.#{$name} {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(242, 242, 242, 1) 50%, rgba(122, 166, 44, 1) 50%);
+
+  &__container {
+    width: 100%;
+    @include containerSecao;
+    position: relative;
+    overflow: hidden;
+    background-color: $secondarySideSacoma;
+    display: flex;
+    flex-direction: column;
+  
+    @include d(tablet-up) {
+      @include spaceSectionX;
+
+      &::after {
+        content: "";
+        width: calc(100% - 60px);
+        height: 60px;
+        background-color: $secondarySideSacoma;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        z-index: 3;
+      }
+
+      &::before {
+        content: "";
+        width: 60px;
+        height: 122px;
+        background-color: $secondarySideSacoma;
+        position: absolute;
+        bottom: -65px;
+        left: 10px;
+        z-index: 4;
+        transform: rotate(45deg);
+      }
+    }
+
+    &_quadrado {
+      min-width: 100%;
+      min-height: 300px;
+
+      @include d(tablet-up) {
+        min-height: 780px;
+      }
+      background-color: var(--white-700);
+      transform: rotate(50deg);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -30%;
+
+      @include d(tablet-up) {
+        left: -48%;
+      }
+      z-index: 1;
+    }
+
+    &_index {
+      z-index: 2;
+
+      & > h1 {
+        @include spaceSectionX;
+        margin-bottom: $space-md;
+
+        @include d(tablet-up) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__swiper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    & a{
+      cursor: pointer;
+
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    &_image{
+      height: 554px;
+      width: 100%;
+
+      @include d(tablet-up){
+        height: 554px;
+      }
+    }
+
+    &_image_figcaption{
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      bottom: 4px;
+
+      color: var(--white-900);
+      background: #000000;
+      border-top: 1px solid #c69016;
+      font-size: $fs-sm2;
+      font-weight: $fw-regular;
+      height: 35px;
+      line-height: 19.6px;
+      padding: 8px $space-default1;
+      text-transform: uppercase;
+      width: 315px;
+
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 100% 50%);
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 90% 0);
+    }
+  }
+}
