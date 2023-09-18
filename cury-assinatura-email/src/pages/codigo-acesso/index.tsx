@@ -7,7 +7,7 @@ import styles from "../../styles/layout/l-codigo-acesso.module.scss";
 import Title from "../../components/title";
 import Input from "../../components/input";
 import Button from "../../components/button";
-// import { validarAcesso } from "../../http";
+import { validarAcesso } from "../../http";
 
 export default function PageCodigoAcesso() {
   const router = useRouter();
@@ -31,7 +31,7 @@ export default function PageCodigoAcesso() {
     };
 
     // Validação do campo
-  /*  if (data.codigo_acesso !== "") {
+    if (data.codigo_acesso !== "") {
       // Seta mensagem enquanto envia os dados
       setMsgEnviando("Aguarde...");
 
@@ -52,7 +52,7 @@ export default function PageCodigoAcesso() {
         .finally(() => setMsgEnviando(null));
     } else {
       setError("Digite um código de acesso");
-    } */
+    }
   }
 
   return (
