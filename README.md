@@ -1,6 +1,6 @@
 # Projetos desenvolvidos na Agencia Mop
 
-Alguns projetos que desenvolvi no período em que trabalhei na agência mop.
+Seleção dos projetos que desenvolvi enquanto trabalhava na Agência MoP. Cada projeto representa um desafio único que enfrentei, demonstrando minhas habilidades e experiências em frontend.
 
 ## Sites
 
