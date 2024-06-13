@@ -1,4 +1,4 @@
-const api_url = process.env.API_URL || "http://localhost:3000/api";
+const api_url = process.env.API_URL || "https://cury-assinatura.vercel.app/api";
 
 async function request(url: any, options: object) {
   const req = await fetch(url, options);
